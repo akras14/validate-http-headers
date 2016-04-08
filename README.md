@@ -73,10 +73,10 @@ It may be helpful to look at the [test file](https://github.com/akras14/validate
 
 ## Hooking it into your code
 
-In [index.js](https://github.com/akras14/validate-http-header/blob/master/rules.js) you can see a sample implementation of how you might want to hook that into your own code.
+In [example.js](https://github.com/akras14/validate-http-header/blob/master/example.js) you can see a sample implementation of how you might want to hook that into your own code.
 
 It's a module that exports only one function called **cleanHeaders**, which accepts http headers represented as a JavaScript object, and goes through every header key and value, removing unwanted characters.
 
-Check out this [test file](https://github.com/akras14/validate-http-header/blob/master/test/index.test.js) to see how it works.
+Check out this [test file](https://github.com/akras14/validate-http-header/blob/master/test/example.test.js) to see how it works.
 
 You may notice that it does two passes through, once simply checking if header is valid, and one more time to remove unwanted characters. I personally prefer that approach because I didn't want to mess with headers that did not need to be messed with. But you can just run it through the cleanHeaderName and cleanHeaderValue right away, to gain faster performance.

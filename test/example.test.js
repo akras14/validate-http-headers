@@ -2,7 +2,7 @@ var expect = require("chai").expect;
 var Lab = require("lab");
 var lab = exports.lab = Lab.script();
 
-var cleanHeaders = require("../");
+var cleanHeaders = require("../example");
 
 var invalidHeaders = {
   "some(name": "жsome value",
